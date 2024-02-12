@@ -57,7 +57,7 @@ button.addEventListener("click", () => {
     fetch('send_mail.php')
       .then(response => {
         if (response.ok) {
-          button.textContent = "Майлээ шалгаарай 🙃";
+          button.textContent = "Майлээ шалгаарай 😘";
         } else {
           console.error('Failed to send email');
           button.textContent = "Error 😞";
