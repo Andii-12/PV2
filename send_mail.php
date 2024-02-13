@@ -19,8 +19,8 @@ try {
     $mail->Port       = 465;
 
     //Recipients
-    $mail->setFrom('andiiandii159@gmail.com', 'Mailer');         //Set the sender of the message (your email address)
-    $mail->addAddress('jackpountjay@gmail.com', 'Joe User');     //Add a recipient (your bae's email address)
+    $mail->setFrom('andiiandii159@gmail.com');         //Set the sender of the message (your email address)
+    $mail->addAddress('jackpountjay@gmail.com');     //Add a recipient (your bae's email address)
     //Ariuqakh@gmail.com
     //Content
     $mail->isHTML(true);
