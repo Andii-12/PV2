@@ -3,10 +3,10 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-require 'vendor/autoload.php';
-require 'PHPMailer/src/Exception.php';
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
+
+require './PHPMailer/src/Exception.php';
+require './PHPMailer/src/PHPMailer.php';
+require './PHPMailer/src/SMTP.php';
 
 $mail = new PHPMailer(true);
 
@@ -17,7 +17,7 @@ try {
     $mail->Host       = 'smtp.gmail.com';                       //gmail SMTP server set to send through
     $mail->SMTPAuth   = true;
     $mail->Username   = 'andiiandii159@gmail.com';                     //SMTP username (your gmail account)
-    $mail->Password   = 'Andii0817';                               //SMTP password (your gmail password or app password)
+    $mail->Password   = 'mtussthwopumfstz';                               //SMTP password (your gmail password or app password)
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
     $mail->Port       = 465;
 
@@ -29,7 +29,7 @@ try {
     $mail->isHTML(true);
     $mail->Subject = 'I Love You';
     $mail->Body    = 'Happy Valentine Day My Love. I love you so much. You are the best thing that has ever happened to me ❤';
-    $mail->addAttachment = 'images/dace.gif', 'Happy Dancing Dragon';
+    $mail->addAttachment = 'public/images/dace.gif', 'Happy Dancing Dragon';
 
     $mail->send();
     echo 'Message has been sent';
