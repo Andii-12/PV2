@@ -22,13 +22,14 @@ try {
     $mail->Port       = 465;
 
     //Recipients
-    $mail->setFrom('andiiandii159@gmail.com');         //Set the sender of the message (your email address)
-    $mail->addAddress('jackpountjay@gmail.com');     //Add a recipient (your bae's email address)
+    $mail->setFrom('andiiandii159@gmail.com', 'Andii');         //Set the sender of the message (your email address)
+    $mail->addAddress('jackpountjay@gmail.com', 'Ariuqa');     //Add a recipient (your bae's email address)
     //Ariuqakh@gmail.com
     //Content
     $mail->isHTML(true);
     $mail->Subject = 'I Love You';
     $mail->Body    = 'Happy Valentine Day My Love. I love you so much. You are the best thing that has ever happened to me ❤';
+    $mail->addAttachment = 'images/dace.gif', 'Happy Dancing Dragon';
 
     $mail->send();
     echo 'Message has been sent';
