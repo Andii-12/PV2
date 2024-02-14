@@ -213,7 +213,7 @@ function drawText() {
 
     if(frameNumber >= 3000 && frameNumber < 99999){
         context.fillStyle = `rgba(255, 159, 159, ${thirdOpacity})`;
-        context.fillText("Ариука Надтай үерхээч  <3", canvas.width/2, (canvas.height/2 + 120));
+        context.fillText("Ariuqa Would you be my Girlfriend? <3", canvas.width/2, (canvas.height/2 + 120));
         thirdOpacity = thirdOpacity + 0.01;
 
         button.style.display = "block";
