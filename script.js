@@ -54,6 +54,7 @@ const button = document.getElementById("valentinesButton");
 button.addEventListener("click", () => {
   if (button.textContent === "Yes! ❤") {
     button.textContent = "loading...";
+    
     fetch('send_mail.php')
       .then(response => {
         if (response.ok) {
@@ -92,13 +93,13 @@ function drawText() {
 
     if(frameNumber < 250){
         context.fillStyle = `rgba(255, 159, 159, ${opacity})`;
-        context.fillText("Өдөр бүр би өөрийгөө ямар азтай гэдэгт итгэж чадахгүйн", canvas.width/2, canvas.height/2);
+        context.fillText("Анх танилцаж байсан тэр өдрөөс хойш 🌞", canvas.width/2, canvas.height/2);
         opacity = opacity + 0.01;
     }
     //fades out the text by decreasing the opacity
     if(frameNumber >= 250 && frameNumber < 500){
         context.fillStyle = `rgba(255, 159, 159, ${opacity})`;
-        context.fillText("Өдөр бүр би өөрийгөө ямар азтай гэдэгт итгэж чадахгүйн", canvas.width/2, canvas.height/2);
+        context.fillText("Анх танилцаж байсан тэр өдрөөс хойш 🌞", canvas.width/2, canvas.height/2);
         opacity = opacity - 0.01;
     }
 
@@ -110,9 +111,9 @@ function drawText() {
         context.fillStyle = `rgba(255, 159, 159, ${opacity})`;
 
         if (window.innerWidth < 600) {           //shortens long sentence for mobile screens
-            drawTextWithLineBreaks(["хэдэн триллион оддын дунд, олон тэрбум жилийн турш"], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
+            drawTextWithLineBreaks(["Маш их хугацаа өнгөрчээ ⏰"], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
         } else {
-            context.fillText("хэдэн триллион оддын дунд, олон тэрбум жилийн турш", canvas.width/2, canvas.height/2);
+            context.fillText("Маш их хугацаа өнгөрчээ ⏰", canvas.width/2, canvas.height/2);
         }
 
         opacity = opacity + 0.01;
@@ -121,9 +122,9 @@ function drawText() {
         context.fillStyle = `rgba(255, 159, 159, ${opacity})`;
         
         if (window.innerWidth < 600) {
-            drawTextWithLineBreaks(["хэдэн триллион оддын дунд, олон тэрбум жилийн турш"], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
+            drawTextWithLineBreaks(["Маш их хугацаа өнгөрчээ ⏰"], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
         } else {
-            context.fillText("хэдэн триллион оддын дунд, олон тэрбум жилийн турш", canvas.width/2, canvas.height/2);
+            context.fillText("Маш их хугацаа өнгөрчээ ⏰", canvas.width/2, canvas.height/2);
         }
 
         opacity = opacity - 0.01;
@@ -134,12 +135,12 @@ function drawText() {
     }
     if(frameNumber > 1000 && frameNumber < 1250){
         context.fillStyle = `rgba(255, 159, 159, ${opacity})`;
-        context.fillText("Хамт байж, энэ амьдралыг чамтай хамт туулах болно", canvas.width/2, canvas.height/2);
+        context.fillText("Чамайг өөр нэгэнтэй дотонсоход би ойлгоно гэж хэлж байсан.", canvas.width/2, canvas.height/2);
         opacity = opacity + 0.01;
     }
     if(frameNumber >= 1250 && frameNumber < 1500){
         context.fillStyle = `rgba(255, 159, 159, ${opacity})`;
-        context.fillText("Хамт байж, энэ амьдралыг чамтай хамт туулах болно", canvas.width/2, canvas.height/2);
+        context.fillText("Чамайг өөр нэгэнтэй дотонсоход би ойлгоно гэж хэлж байсан.", canvas.width/2, canvas.height/2);
         opacity = opacity - 0.01;
     }
 
@@ -148,12 +149,12 @@ function drawText() {
     }
     if(frameNumber > 1500 && frameNumber < 1750){
         context.fillStyle = `rgba(255, 159, 159, ${opacity})`;
-        context.fillText("Миний сэтгэл чамд маш их дасжээ", canvas.width/2, canvas.height/2);
+        context.fillText("Тэгсэн чадкүнээ 😂", canvas.width/2, canvas.height/2);
         opacity = opacity + 0.01;
     }
     if(frameNumber >= 1750 && frameNumber < 2000){
         context.fillStyle = `rgba(255, 159, 159, ${opacity})`;
-        context.fillText("Миний сэтгэл чамд маш их дасжээ", canvas.width/2, canvas.height/2);
+        context.fillText("Тэгсэн чадкүнээ 😂", canvas.width/2, canvas.height/2);
         opacity = opacity - 0.01;
     }
 
@@ -164,9 +165,9 @@ function drawText() {
         context.fillStyle = `rgba(255, 159, 159, ${opacity})`;
 
         if (window.innerWidth < 600) {
-            drawTextWithLineBreaks(["Би чамайг өөр нэгэнд алдахыг хүсээгүй "], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
+            drawTextWithLineBreaks(["Ягаад ч юм чамайг харамлах сэтгэл төрдөг болсон байна 🫂"], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
         } else {
-            context.fillText("Би чамайг өөр нэгэнд алдахыг хүсээгүй ", canvas.width/2, canvas.height/2);
+            context.fillText("Ягаад ч юм чамайг харамлах сэтгэл төрдөг болсон байна 🫂", canvas.width/2, canvas.height/2);
         }
 
         opacity = opacity + 0.01;
@@ -175,9 +176,9 @@ function drawText() {
         context.fillStyle = `rgba(255, 159, 159, ${opacity})`;
 
         if (window.innerWidth < 600) {
-            drawTextWithLineBreaks(["Би чамайг өөр нэгэнд алдахыг хүсээгүй "], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
+            drawTextWithLineBreaks(["Ягаад ч юм чамайг харамлах сэтгэл төрдөг болсон байна 🫂"], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
         } else {
-            context.fillText("Би чамайг өөр нэгэнд алдахыг хүсээгүй ", canvas.width/2, canvas.height/2);
+            context.fillText("Ягаад ч юм чамайг харамлах сэтгэл төрдөг болсон байна 🫂", canvas.width/2, canvas.height/2);
         }
         
         opacity = opacity - 0.01;
@@ -190,9 +191,9 @@ function drawText() {
         context.fillStyle = `rgba(255, 159, 159, ${opacity})`;
 
         if (window.innerWidth < 600) {
-            drawTextWithLineBreaks(["Өдий хүртэл амьдрахдаа чамаас өөр онцгой нэгэн байгаагүй"], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
+            drawTextWithLineBreaks(["Тийм учраас чамайг илүү их мэдэж хамт цагийг өнгөрүүлмээр байна."], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
         } else {
-            context.fillText("Өдий хүртэл амьдрахдаа чамаас өөр онцгой нэгэн байгаагүй", canvas.width/2, canvas.height/2);
+            context.fillText("Тийм учраас чамайг илүү их мэдэж хамт цагийг өнгөрүүлмээр байна.", canvas.width/2, canvas.height/2);
         }
 
         opacity = opacity + 0.01;
@@ -203,9 +204,9 @@ function drawText() {
 
 
         if (window.innerWidth < 600) {
-            drawTextWithLineBreaks(["Ямар нэг харилцаа богинохон байдаг ч гэсэн, ❤Би чамайг өөрийнхөө үүрд байлгамаар байна❤"], canvas.width / 2, (canvas.height/2 + 60), fontSize, lineHeight);
+            drawTextWithLineBreaks(["❤Чи минийх болхимуу яхын❤"], canvas.width / 2, (canvas.height/2 + 60), fontSize, lineHeight);
         } else {
-            context.fillText("Ямар нэг харилцаа богинохон байдаг ч гэсэн, ❤Би чамайг өөрийнхөө үүрд байлгамаар байна❤", canvas.width/2, (canvas.height/2 + 50));
+            context.fillText("❤Чи минийх болхимуу яхын❤", canvas.width/2, (canvas.height/2 + 50));
         }
 
         secondOpacity = secondOpacity + 0.01;
