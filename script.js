@@ -110,17 +110,10 @@ function drawText() {
     context.shadowOffsetX = 0;
     context.shadowOffsetY = 0;
 
-    if(frameNumber < 250){
-        context.fillStyle = `rgba(255, 159, 159, ${opacity})`;
-        context.fillText("She said NO ☹️", canvas.width/2, canvas.height/2);
-        opacity = opacity + 0.01;
-    }
-    //fades out the text by decreasing the opacity
-    if(frameNumber >= 250 && frameNumber < 500){
-        context.fillStyle = `rgba(255, 159, 159, ${opacity})`;
-        context.fillText("She said NO ☹️", canvas.width/2, canvas.height/2);
-        opacity = opacity - 0.01;
-    }
+    context.fillStyle = "rgba(255, 159, 159, 1)";
+    context.fillText("She said NO ☹️", canvas.width/2, canvas.height/2);
+
+    
 }
 
    
