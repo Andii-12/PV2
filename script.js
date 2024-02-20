@@ -1,3 +1,17 @@
+document.addEventListener("DOMContentLoaded", function () {
+    var audio = document.querySelector("audio");
+    
+    // Play audio when the button is clicked
+    document.getElementById("valentinesButton").addEventListener("click", function () {
+        audio.play().then(() => {
+            // Audio started playing successfully
+            console.log("Audio started playing");
+        }).catch(error => {
+            // Handle errors
+            console.error("Error playing audio:", error);
+        });
+    });
+
 var canvas = document.getElementById("starfield");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -6,6 +20,7 @@ var context = canvas.getContext("2d");
 var stars = 500;
 var colorrange = [0, 60, 240];
 var starArray = [];
+
 
 function getRandom(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -72,6 +87,10 @@ button.addEventListener("click", () => {
   }
 });
 
+
+
+
+
 function drawTextWithLineBreaks(lines, x, y, fontSize, lineHeight) {
     lines.forEach((line, index) => {
         context.fillText(line, x, y + index * (fontSize + lineHeight));
@@ -93,140 +112,18 @@ function drawText() {
 
     if(frameNumber < 250){
         context.fillStyle = `rgba(255, 159, 159, ${opacity})`;
-        context.fillText("Анх танилцаж байсан тэр өдрөөс хойш 🌞", canvas.width/2, canvas.height/2);
+        context.fillText("She said NO ☹️", canvas.width/2, canvas.height/2);
         opacity = opacity + 0.01;
     }
     //fades out the text by decreasing the opacity
     if(frameNumber >= 250 && frameNumber < 500){
         context.fillStyle = `rgba(255, 159, 159, ${opacity})`;
-        context.fillText("Анх танилцаж байсан тэр өдрөөс хойш 🌞", canvas.width/2, canvas.height/2);
+        context.fillText("She said NO ☹️", canvas.width/2, canvas.height/2);
         opacity = opacity - 0.01;
     }
-
-    //needs this if statement to reset the opacity before next statement on canvas
-    if(frameNumber == 500){
-        opacity = 0;
-    }
-    if(frameNumber > 500 && frameNumber < 750){
-        context.fillStyle = `rgba(255, 159, 159, ${opacity})`;
-
-        if (window.innerWidth < 600) {           //shortens long sentence for mobile screens
-            drawTextWithLineBreaks(["Маш их хугацаа өнгөрчээ ⏰"], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
-        } else {
-            context.fillText("Маш их хугацаа өнгөрчээ ⏰", canvas.width/2, canvas.height/2);
-        }
-
-        opacity = opacity + 0.01;
-    }
-    if(frameNumber >= 750 && frameNumber < 1000){
-        context.fillStyle = `rgba(255, 159, 159, ${opacity})`;
-        
-        if (window.innerWidth < 600) {
-            drawTextWithLineBreaks(["Маш их хугацаа өнгөрчээ ⏰"], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
-        } else {
-            context.fillText("Маш их хугацаа өнгөрчээ ⏰", canvas.width/2, canvas.height/2);
-        }
-
-        opacity = opacity - 0.01;
-    }
-
-    if(frameNumber == 1000){
-        opacity = 0;
-    }
-    if(frameNumber > 1000 && frameNumber < 1250){
-        context.fillStyle = `rgba(255, 159, 159, ${opacity})`;
-        context.fillText("Чамайг өөр нэгэнтэй дотонсоход би ойлгоно гэж хэлж байсан.", canvas.width/2, canvas.height/2);
-        opacity = opacity + 0.01;
-    }
-    if(frameNumber >= 1250 && frameNumber < 1500){
-        context.fillStyle = `rgba(255, 159, 159, ${opacity})`;
-        context.fillText("Чамайг өөр нэгэнтэй дотонсоход би ойлгоно гэж хэлж байсан.", canvas.width/2, canvas.height/2);
-        opacity = opacity - 0.01;
-    }
-
-    if(frameNumber == 1500){
-        opacity = 0;
-    }
-    if(frameNumber > 1500 && frameNumber < 1750){
-        context.fillStyle = `rgba(255, 159, 159, ${opacity})`;
-        context.fillText("Тэгсэн чадкүнээ 😂", canvas.width/2, canvas.height/2);
-        opacity = opacity + 0.01;
-    }
-    if(frameNumber >= 1750 && frameNumber < 2000){
-        context.fillStyle = `rgba(255, 159, 159, ${opacity})`;
-        context.fillText("Тэгсэн чадкүнээ 😂", canvas.width/2, canvas.height/2);
-        opacity = opacity - 0.01;
-    }
-
-    if(frameNumber == 2000){
-        opacity = 0;
-    }
-    if(frameNumber > 2000 && frameNumber < 2250){
-        context.fillStyle = `rgba(255, 159, 159, ${opacity})`;
-
-        if (window.innerWidth < 600) {
-            drawTextWithLineBreaks(["Ягаад ч юм чамайг харамлах сэтгэл төрдөг болсон байна 🫂"], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
-        } else {
-            context.fillText("Ягаад ч юм чамайг харамлах сэтгэл төрдөг болсон байна 🫂", canvas.width/2, canvas.height/2);
-        }
-
-        opacity = opacity + 0.01;
-    }
-    if(frameNumber >= 2250 && frameNumber < 2500){
-        context.fillStyle = `rgba(255, 159, 159, ${opacity})`;
-
-        if (window.innerWidth < 600) {
-            drawTextWithLineBreaks(["Ягаад ч юм чамайг харамлах сэтгэл төрдөг болсон байна 🫂"], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
-        } else {
-            context.fillText("Ягаад ч юм чамайг харамлах сэтгэл төрдөг болсон байна 🫂", canvas.width/2, canvas.height/2);
-        }
-        
-        opacity = opacity - 0.01;
-    }
-
-    if(frameNumber == 2500){
-        opacity = 0;
-    }
-    if(frameNumber > 2500 && frameNumber < 99999){
-        context.fillStyle = `rgba(255, 159, 159, ${opacity})`;
-
-        if (window.innerWidth < 600) {
-            drawTextWithLineBreaks(["Тийм учраас чамайг илүү их мэдэж хамт цагийг өнгөрүүлмээр байна."], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
-        } else {
-            context.fillText("Тийм учраас чамайг илүү их мэдэж хамт цагийг өнгөрүүлмээр байна.", canvas.width/2, canvas.height/2);
-        }
-
-        opacity = opacity + 0.01;
-    }
-    
-    if(frameNumber >= 2750 && frameNumber < 99999){
-        context.fillStyle = `rgba(255, 159, 159, ${secondOpacity})`;
-
-
-        if (window.innerWidth < 600) {
-            drawTextWithLineBreaks(["❤Чи минийх болхимуу яхын❤"], canvas.width / 2, (canvas.height/2 + 60), fontSize, lineHeight);
-        } else {
-            context.fillText("❤Чи минийх болхимуу яхын❤", canvas.width/2, (canvas.height/2 + 50));
-        }
-
-        secondOpacity = secondOpacity + 0.01;
-    }
-
-    if(frameNumber >= 3000 && frameNumber < 99999){
-        context.fillStyle = `rgba(255, 159, 159, ${thirdOpacity})`;
-        context.fillText("Ariuqa Would you be my Girlfriend? <3", canvas.width/2, (canvas.height/2 + 120));
-        thirdOpacity = thirdOpacity + 0.01;
-
-        button.style.display = "block";
-    }   
-
-     // Reset the shadow effect after drawing the text
-     context.shadowColor = "transparent";
-     context.shadowBlur = 0;
-     context.shadowOffsetX = 0;
-     context.shadowOffsetY = 0;
 }
 
+   
 function draw() {
     context.putImageData(baseFrame, 0, 0);
 
@@ -246,4 +143,11 @@ window.addEventListener("resize", function () {
     baseFrame = context.getImageData(0, 0, window.innerWidth, window.innerHeight);
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    var audio = document.querySelector("audio");
+    audio.play();
+});
+
+
 window.requestAnimationFrame(draw);
+});
