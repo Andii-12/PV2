@@ -136,13 +136,6 @@ window.addEventListener("resize", function () {
     baseFrame = context.getImageData(0, 0, window.innerWidth, window.innerHeight);
 });
 
-// Volume control
-var volumeControl = document.getElementById("volumeControl");
-volumeControl.addEventListener("input", function () {
-    var audio = document.getElementById("myAudio");
-    audio.volume = volumeControl.value;
-});
-
 document.addEventListener("DOMContentLoaded", function () {
     var audio = document.querySelector("audio");
     audio.play();
